@@ -3,77 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang Web Đơn Giản</title>
+    <title>ScriptPastebin Clone</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            color: #fff;
         }
         header {
-            background-color: #4CAF50;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-        }
-        nav {
+            padding: 10px 20px;
+            background-color: #222;
             display: flex;
-            justify-content: center;
-            background-color: #333;
+            align-items: center;
+            justify-content: space-between;
         }
-        nav a {
-            color: white;
-            padding: 0.5rem 1rem;
-            text-decoration: none;
+        header h1 {
+            margin: 0;
+            font-size: 24px;
         }
-        nav a:hover {
-            background-color: #575757;
-        }
-        section {
-            padding: 2rem;
-            text-align: center;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1rem;
+        .sidebar {
+            width: 250px;
+            background-color: #1c1c1c;
             position: fixed;
-            bottom: 0;
-            width: 100%;
+            height: 100%;
+            padding-top: 20px;
+            border-right: 1px solid #333;
+        }
+        .sidebar a {
+            display: block;
+            color: #ccc;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 18px;
+        }
+        .sidebar a:hover {
+            background-color: #333;
+            color: #fff;
+        }
+        .content {
+            margin-left: 260px;
+            padding: 20px;
+        }
+        .script-card {
+            background-color: #1c1c1c;
+            border: 1px solid #333;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .script-card img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+        .script-card h2 {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+        .script-card p {
+            font-size: 14px;
+            color: #aaa;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Chào Mừng Đến Với Trang Web Của Tôi</h1>
+        <h1>ScriptPastebin</h1>
     </header>
+    <div class="sidebar">
+        <a href="#">Home</a>
+        <a href="#">Scripts</a>
+        <a href="#">Mobile Scripts</a>
+        <a href="#">Executor</a>
+        <a href="#">About Us</a>
+    </div>
+    <div class="content">
+        <h2>Roblox Scripts</h2>
+        <p>ALL SCRIPTS JUST COPY PASTE</p>
 
-    <nav>
-        <a href="#about">Giới Thiệu</a>
-        <a href="#services">Dịch Vụ</a>
-        <a href="#contact">Liên Hệ</a>
-    </nav>
-
-    <section id="about">
-        <h2>Giới Thiệu</h2>
-        <p>Đây là một trang web mẫu được thiết kế để bạn tham khảo.</p>
-    </section>
-
-    <section id="services">
-        <h2>Dịch Vụ</h2>
-        <p>Chúng tôi cung cấp nhiều dịch vụ hấp dẫn, từ thiết kế web đến phát triển ứng dụng.</p>
-    </section>
-
-    <section id="contact">
-        <h2>Liên Hệ</h2>
-        <p>Email: example@example.com</p>
-        <p>Điện thoại: 123-456-789</p>
-    </section>
-
-    <footer>
-        <p>© 2024 Trang Web Đơn Giản. Tất cả các quyền được bảo lưu.</p>
-    </footer>
+        <div class="script-card">
+            <img src="https://via.placeholder.com/400x200" alt="Script Image">
+            <h2>FISCH (NATIVE)</h2>
+            <p>By: Skays | 6 December 2024</p>
+        </div>
+        <div class="script-card">
+            <img src="https://via.placeholder.com/400x200" alt="Script Image">
+            <h2>Another Script</h2>
+            <p>By: John Doe | 5 December 2024</p>
+        </div>
+    </div>
 </body>
 </html>
