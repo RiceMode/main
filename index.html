@@ -1,96 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ScriptPastebin Clone</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #111;
-            color: #fff;
-        }
-        header {
-            padding: 10px 20px;
-            background-color: #222;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 24px;
-        }
-        .sidebar {
-            width: 250px;
-            background-color: #1c1c1c;
-            position: fixed;
-            height: 100%;
-            padding-top: 20px;
-            border-right: 1px solid #333;
-        }
-        .sidebar a {
-            display: block;
-            color: #ccc;
-            text-decoration: none;
-            padding: 10px 20px;
-            font-size: 18px;
-        }
-        .sidebar a:hover {
-            background-color: #333;
-            color: #fff;
-        }
-        .content {
-            margin-left: 260px;
-            padding: 20px;
-        }
-        .script-card {
-            background-color: #1c1c1c;
-            border: 1px solid #333;
-            padding: 15px;
-            margin-bottom: 20px;
-            border-radius: 5px;
-        }
-        .script-card img {
-            max-width: 100%;
-            border-radius: 5px;
-        }
-        .script-card h2 {
-            font-size: 20px;
-            margin: 10px 0;
-        }
-        .script-card p {
-            font-size: 14px;
-            color: #aaa;
-        }
-    </style>
+    <title>Website Cơ Bản</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>ScriptPastebin</h1>
+        <h1>Website Cơ Bản</h1>
+        <nav>
+            <ul>
+                <li><a href="#gioi-thieu">Giới thiệu</a></li>
+                <li><a href="#hinh-anh">Hình ảnh</a></li>
+                <li><a href="#lien-he">Liên hệ</a></li>
+            </ul>
+        </nav>
     </header>
-    <div class="sidebar">
-        <a href="#">Home</a>
-        <a href="#">Scripts</a>
-        <a href="#">Mobile Scripts</a>
-        <a href="#">Executor</a>
-        <a href="#">About Us</a>
-    </div>
-    <div class="content">
-        <h2>Roblox Scripts</h2>
-        <p>ALL SCRIPTS JUST COPY PASTE</p>
 
-        <div class="script-card">
-            <img src="https://via.placeholder.com/400x200" alt="Script Image">
-            <h2>FISCH (NATIVE)</h2>
-            <p>By: Skays | 6 December 2024</p>
-        </div>
-        <div class="script-card">
-            <img src="https://via.placeholder.com/400x200" alt="Script Image">
-            <h2>Another Script</h2>
-            <p>By: John Doe | 5 December 2024</p>
-        </div>
-    </div>
+    <main>
+        <section id="gioi-thieu">
+            <h2>Giới thiệu</h2>
+            <p>Đây là phần giới thiệu về website. Bạn có thể thêm nội dung về mục đích hoặc thông tin bạn muốn trình bày ở đây.</p>
+        </section>
+
+        <section id="hinh-anh">
+            <h2>Hình ảnh</h2>
+            <div class="image-gallery">
+                <img src="image1.jpg" alt="Hình ảnh 1">
+                <img src="image2.jpg" alt="Hình ảnh 2">
+                <img src="image3.jpg" alt="Hình ảnh 3">
+            </div>
+        </section>
+
+        <section id="lien-he">
+            <h2>Liên hệ</h2>
+            <form>
+                <label for="name">Tên:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Tin nhắn:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Gửi</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Bản quyền © 2024 - Website của bạn</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
