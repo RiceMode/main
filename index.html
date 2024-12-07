@@ -19,7 +19,36 @@
             position: relative; /* Đảm bảo mục lục có thể được đặt tuyệt đối so với body */
         }
 
-        /* Kiểu dáng cho nút mục lục */
+        /* Giao diện RiceMode */
+        .rice-mode {
+            display: flex;
+            align-items: center;
+            background-color: #cfe2ff;
+            padding: 10px 20px;
+            border-radius: 10px;
+            width: fit-content;
+            font-family: Arial, sans-serif;
+            color: black;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 10;
+        }
+
+        .rice-mode .icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+            background: url('image/icon.png') no-repeat center center; /* Đặt URL icon của bạn */
+            background-size: contain;
+        }
+
+        .rice-mode .text {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        /* Nút mục lục */
         #toggle-btn {
             padding: 15px;
             background-color: rgba(0, 0, 0, 0.5); /* Nền trong suốt */
@@ -38,7 +67,7 @@
             height: 50px; /* Chiều cao của nút */
         }
 
-        /* Kiểu dáng mục lục */
+        /* Mục lục */
         #toc {
             display: none;
             background-color: rgba(255, 255, 255, 0.9);
@@ -49,14 +78,13 @@
             right: 20px;
             width: 250px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            z-index: 5; /* Đảm bảo mục lục đè lên phần nội dung */
+            z-index: 5;
         }
 
         #toc h4 {
             margin-top: 0;
         }
 
-        /* Kiểu dáng cho các liên kết trong mục lục */
         #toc ul {
             padding: 0;
             list-style: none;
@@ -78,7 +106,7 @@
         /* Hiệu ứng gõ chữ */
         .typing {
             font-size: 2rem;
-            border-right: 3px solid white; /* Đường con trỏ gõ */
+            border-right: 3px solid white;
             padding-right: 5px;
             white-space: nowrap;
             overflow: hidden;
@@ -86,7 +114,6 @@
             animation: typing 4s steps(30) 1s forwards, blink 0.75s step-end infinite;
         }
 
-        /* Quá trình hiệu ứng gõ chữ */
         @keyframes typing {
             from {
                 width: 0;
@@ -96,7 +123,6 @@
             }
         }
 
-        /* Hiệu ứng nhấp nháy con trỏ */
         @keyframes blink {
             50% {
                 border-color: transparent;
@@ -110,53 +136,54 @@
             z-index: 1;
             position: relative;
             top: 100px;
-            /* Đảm bảo nội dung không bị ảnh hưởng bởi mục lục */
         }
 
         h1 {
             font-size: 3rem;
-            text-align: center;
         }
 
         p {
             font-size: 1.5rem;
-            text-align: center;
         }
-
     </style>
 </head>
 <body>
+    <!-- Giao diện RiceMode -->
+    <div class="rice-mode">
+        <div class="icon"></div>
+        <div class="text">RiceMode</div>
+    </div>
+
     <!-- Nút mục lục -->
     <button id="toggle-btn">≡</button>
 
     <!-- Mục lục -->
     <div id="toc">
-        <h4>≡</h4>
+        <h4>Mục Lục</h4>
         <ul>
             <li><a href="https://guns.lol/bigzdepzai">My Profile</a></li>
-            <li><a href="#section2">Annoucements</a></li>
+            <li><a href="#section2">Announcements</a></li>
         </ul>
     </div>
 
     <!-- Nội dung trang -->
     <div class="content">
-        <!-- Áp dụng class 'typing' cho h1 để tạo hiệu ứng gõ chữ -->
         <h1 class="typing">Welcome to RiceMode</h1>
-        <p> </p>
+        <p>Enjoy the experience!</p>
     </div>
 
     <script>
         const toggleBtn = document.getElementById('toggle-btn');
         const toc = document.getElementById('toc');
 
-        // Thay đổi biểu tượng và hiển thị/ẩn mục lục
+        // Thay đổi hiển thị mục lục khi nhấn nút
         toggleBtn.addEventListener('click', () => {
             if (toc.style.display === 'none' || toc.style.display === '') {
                 toc.style.display = 'block';
-                toggleBtn.innerHTML = '×'; // Thay chữ 'Mục Lục' bằng dấu '×'
+                toggleBtn.innerHTML = '×';
             } else {
                 toc.style.display = 'none';
-                toggleBtn.innerHTML = '≡'; // Quay lại chữ 'Mục Lục'
+                toggleBtn.innerHTML = '≡';
             }
         });
     </script>
